@@ -47,7 +47,7 @@
 1. **Clone the repository and install dependencies**:
 
    ```bash
-   git clone https://github.com/hungpn23/flashease_client.git
+   git clone https://github.com/hungpn23/flashease_client-fastapi.git
    cd flashease_client
    pnpm install
    ```
@@ -55,15 +55,11 @@
 2. **Build and run the application**:
 
    ```bash
-   docker network create flashease
-   COMPOSE_BAKE=true docker compose -f compose.local.yml up --build
+   pnpm dev
    ```
 
 3. **Access the application**:
-   Open http://localhost in your browser to access the app via Nginx.
-
-   The Nginx proxy routes requests to the Next.js frontend (http://client:3000).
-   API requests to /api/v1/ will be proxied to the NestJS backend (if running on server:3001).
+   The Nginx proxy routes requests to the Next.js frontend (http://localhost:3000).
 
 #### Server side
 
