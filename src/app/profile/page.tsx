@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 
 export default async function ProfilePage() {
   const user = await LoadUser();
+  console.log("🚀 ~ ProfilePage ~ user:", user);
 
   if ("statusCode" in user) throw new Error("Something went wrong!");
   const firstLetter = user.username.charAt(0).toUpperCase();
